@@ -1,0 +1,117 @@
+.form--contacts{
+	background: $brand-dark;
+	padding: 45px;
+
+	legend{
+		color: #fff;
+		font-weight: bold;
+		font-size: 24px;
+		margin-bottom: 45px;
+	}
+
+	label{
+		color: lighten($brand-dark, 40%);
+	}
+	.form-group{
+		.form-control{
+			color: lighten($brand-dark, 50%);
+			&:focus, 
+			&.non-empty{
+				~ label{
+					color: lighten($brand-dark, 25%);
+				}
+			}
+		}
+		.form-control__helper{
+			border-color: lighten($brand-dark, 40%);
+			&:before{
+				border-color: lighten($brand-dark, 25%);
+			}
+		}
+	}
+}
+
+.form-group{
+	position: relative;
+	margin-bottom: 35px;
+	padding-bottom: 5px;
+
+	label{
+		position: absolute;
+		top:0;
+		display: block;
+		width: 100%;
+		left:0;
+		margin-bottom: 0;
+		transition: .25s transform, .25s font, .25s color;
+	}
+	.form-control__helper{
+		position: absolute;
+		bottom:0;
+		left:0;
+		width: 100%;
+		border-bottom: 2px solid $brand-dark;
+		&:before{
+			content:"";
+			position: absolute;
+			border-bottom: 2px solid lighten($brand-dark, 10%);
+			width:0;
+			top:0;
+			left:50%;
+			transform: translateX(-50%);
+			transition: .25s width;
+		}
+	}
+
+	&.invalid .form-control__helper{
+		border-color: $brand-danger;
+		&:before{
+			border-color: darken($brand-danger, 10%);
+		}
+	}
+
+	.form-control{
+		background: 0;
+		padding:0;
+		border:0;
+		font-family: $font-family;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		&:focus, 
+		&.non-empty{
+			& ~ label{
+				transform: translateY(-100%);
+				font-size: .8em;
+			}
+			& ~ .form-control__helper{
+				&:before{
+					width: 100%;
+				}
+			}
+		}
+	}
+	.form-message{
+		position: absolute;
+		bottom:100%;right:0;
+		margin-bottom: -5px;
+		background: $brand-danger;
+		padding: 5px 8px;
+		font-size: 14px;
+		color: #fff;
+
+		&:before{
+			content:"";
+			position: absolute;
+			top:100%;
+			right: 10px;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 6px 5px 0 5px;
+			border-color: $brand-alt transparent transparent transparent;
+		}
+	}
+	textarea.form-control{
+		resize: none;
+	}
+}

@@ -1,0 +1,117 @@
+.portfolio{
+	.portfolio__item{
+		width: 100%;
+		padding-bottom: 68%;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		position: relative;
+		
+		overflow: hidden;
+		filter: grayscale(.5);
+		@include shadow(0);
+		transition: .4s filter, .4s box-shadow, .4s opacity;
+
+		&:hover{
+			@include shadow(.5);
+			filter: grayscale(0);
+			z-index: 2;
+
+			.item__content{
+				opacity: 1;
+				transform: translateY(0);
+			}
+
+			&:after{
+                transform: translate3d(0,0,0);
+                opacity: 1;
+            }
+		}
+
+		&:after{
+			position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba($brand-dark,0) 0%, rgba($brand-dark,0.5) 75%);
+            content: '';
+            opacity: 0;
+            transform: translate3d(0,50%,0);
+            transition: .35s opacity, .35s transform;
+		}
+
+		.item__content{
+			position: absolute;
+			z-index: 2;
+			bottom:0;
+			left:0;
+			width: 100%;
+			padding: 45px 45px 40px;
+			color: #fff;
+
+			transform: translateY(50%);
+			opacity: 0;
+			transition: .35s transform, .35s opacity;
+
+			p{
+				margin-bottom: 0;
+			}
+
+			.item__title{
+				font-weight: bold;
+				text-transform: uppercase;
+				font-size: 24px;
+				a{
+					color:inherit;
+					i{
+						color: $brand-alt;
+						transition: .25s color;
+					}
+
+					span{
+						position: relative;
+						&:after{
+							content:"";
+							position: absolute;
+							top:100%;
+							left:0;
+							width: 100%;
+							opacity: 0;
+							border-bottom: 2px solid #fff;
+							transition: .25s transform, .25s opacity;
+							transform: translateY(-5px);
+						}
+					}
+
+					&:hover, &:focus{
+						text-decoration: none;
+						i{
+							color: darken($brand-alt, 10%)
+						}
+						span{
+							&:after{
+								opacity: 1;
+								transform: translateY(0);
+							}
+						}
+					}
+				}
+			}
+			.item__desc{
+				color: rgba(#fff, .75);
+				font-size: 16px;
+				font-weight: 300;
+			}
+		}
+	}
+
+	&:hover{
+		.portfolio__item{
+			opacity: .5;
+			&:hover{
+				opacity: 1;
+			}
+		}
+	}
+}

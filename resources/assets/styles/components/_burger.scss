@@ -1,0 +1,109 @@
+.burger{
+	width: 30px;
+	height: 24px;
+	position: relative;
+	z-index: 1000;
+	cursor: pointer;
+
+	// Position
+	position: absolute;
+	right:45px;
+	top:45px;
+
+	div{
+		display: block;
+		width: 100%;
+		height: 0;
+
+		position: absolute;
+
+		border-top: 2px solid $brand-dark;
+		border-bottom: 2px solid $brand-dark;
+
+		transition: .25s opacity, .25s transform, .25s border-color;
+
+		&.burger--top{
+			top:0;
+			transform-origin: 0 0;
+		}
+		
+		&.burger--bottom{
+			bottom:0;
+			transform-origin: 0 100%;
+		}
+
+		&.burger--middle{
+			top:50%;
+			margin-top: -2px;
+			opacity: 1;
+		}
+	}
+
+	&:before{
+		content: "me";
+		transform: translateX(-100%);
+		top:0;
+		margin-top: -2px;
+	}
+	&:after{
+		content: "nu";
+		transform: translateX(100%);
+		bottom:0;
+		margin-bottom: -2px;
+	}
+	&:before, &:after{
+		position: absolute;
+		left:0;
+		width: 100%;
+		display: block;
+		line-height: 1;
+		font-size: 12px;
+		text-transform: uppercase;
+		font-weight: bold;
+		text-align: center;
+
+		opacity: 0;
+		transition: .25s opacity, .25s transform;
+	}
+
+	&:hover{
+		div{
+			&.burger--top{
+				transform: translateX(100%);
+			}
+			&.burger--bottom{
+				transform: translateX(-100%);
+			}
+			opacity: 0;
+		}
+		&:before, &:after{
+			opacity: 1;
+		}
+		&:before{
+			transform: translateX(0);
+		}
+		&:after{
+			transform: translateX(0);
+		}
+	}
+
+	&.burger--opened{
+		div{
+			border-color: #fff;
+			opacity: 1;
+			&.burger--top{
+				transform: rotate(45deg);
+			}
+			&.burger--bottom{
+				transform: rotate(-45deg);
+			}
+			&.burger--middle{
+				transform: scale(0);
+				opacity: 0;
+			}
+		}
+		&:before, &:after{
+			opacity: 0;
+		}
+	}
+}

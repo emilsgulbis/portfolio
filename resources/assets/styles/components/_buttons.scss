@@ -1,0 +1,44 @@
+.btn{
+	text-transform: uppercase;
+	line-height: normal;
+	font-weight: 800;
+	font-family: $font-family;
+	letter-spacing: 4px;
+	padding: 1rem 1rem;
+	border:0;
+}
+
+.btn-rounded{
+	border-radius: 30px;
+}
+
+.btn-full{
+	display: block;
+	width: 100%;
+}
+
+.btn-primary{
+	&:hover{
+		background: mix($brand-dark, $brand-primary, 25%)
+	}
+}
+
+.btn-alt{
+	background: $brand-alt;
+	color: #fff;
+
+	&:hover{
+		background: darken($brand-alt, 10%);
+	}
+}
+
+.invert{
+	.btn-primary{
+		border: 3px solid #fff;
+
+		&:hover{
+			background: #fff;
+			color: $brand-primary;
+		}
+	}
+}

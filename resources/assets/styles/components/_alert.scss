@@ -1,0 +1,15 @@
+.alert-success{
+	background: $brand-success;
+	color: #fff;
+	border:0;
+}
+
+.alert{
+	padding: 30px;
+	p{
+		margin-bottom: 5px;
+	}
+	& > :last-child{
+		margin-bottom: 0;
+	}
+}

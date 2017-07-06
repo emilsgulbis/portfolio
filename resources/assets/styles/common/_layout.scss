@@ -1,0 +1,143 @@
+html{
+    font-size: 18px;
+}
+body{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: #fff !important;
+}
+
+@mixin shadow($opacity : .3){
+	box-shadow: 0 8px 45px rgba(#000, $opacity);
+}
+
+#page-container{
+	min-height: 100vh;
+	background: $body-bg;
+	
+	transition: transform .3s, opacity .3s;
+
+	#page{
+		display: flex;
+		flex-direction: row;
+		padding-bottom: 45px;
+	}
+
+	&.menu--active{
+		transform: scale(.95);
+		opacity: .5;
+	}
+
+	#sidebar{
+		width: 280px;
+		background: $body-bg;
+		color: #fff;
+		padding: 45px 0 0 45px;
+		// padding-bottom: 0;
+
+		display: flex;
+		flex-direction:column;
+		justify-content: space-between;
+
+		#header{
+			margin-bottom: 100px;
+		}
+
+		#footer{
+			transition: .25s transform;
+			a{
+				color: inherit;
+				&:hover, &:focus{
+					text-decoration: none;
+				}
+			}
+		}
+	}
+
+	#content{
+		position: relative;
+		background: $content-bg;
+		flex: 1;
+		padding: 45px;
+		overflow: hidden;
+		// display: flex;
+
+		&:before{
+			content:"";
+			position: absolute;
+			top:0;
+			left:0;
+			height: 100%;
+			background: $body-bg;
+			width: 185px;
+			transition: .3s transform;
+			transform: translateX(-100%)
+		}
+	}
+}
+
+
+.col-primary{
+	width: 520px;
+	flex-basis: auto;
+	flex-grow:0;
+	> * {
+		margin-bottom: 45px;
+		@include shadow();
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+	& + .col{
+		padding-left: 80px;
+	}
+}
+
+.with-columns{
+	#page-container{
+		#content{
+			&:before{
+				transform: translateX(0)
+			}
+		}
+		#sidebar #footer{
+			transform: translateY(-45px);
+		}
+	}
+}
+
+.invert{
+	#page-container{
+		background: #fff;
+		#sidebar{
+			background: #fff;
+			color: $brand-primary;
+		}
+		#content{
+			background: $brand-primary;
+			color: #fff;
+		}
+	}
+
+	.burger{
+		&:before, &:after, div{
+			border-color: #fff;
+		}
+	}
+}
+
+.content__404{
+	padding-top: 250px;
+	padding-bottom: 250px;
+	text-align: center;
+	.title{
+		font-size: 72px;
+	}
+	.btn{
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+}

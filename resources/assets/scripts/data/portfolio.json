@@ -1,0 +1,58 @@
+[
+	{
+		"title" : "Posad Shawl",
+		"url" : "http://posadshawl.eu/",
+		"date" : "2015-01",
+		"task" : "Front-end development",
+		"thumbnail" : "/images/portfolio/posadshawl.jpg"
+	},
+	{
+		"title" : "Velosock",
+		"url" : "https://velosock.com/",
+		"date" : "2015-02",
+		"task" : "Front-end development",
+		"thumbnail" : "/images/portfolio/velosock.jpg"
+	},
+	{
+		"title" : "Adevo",
+		"url" : "https://adevo.io/",
+		"date" : "2015-03",
+		"task" : "Wordpress Theme development",
+		"thumbnail" : "/images/portfolio/adevo.jpg"
+	},
+	{
+		"title" : "RagnSells",
+		"url" : "http://ragnsells.lv/",
+		"date" : "2016-02",
+		"task" : "Wordpress Theme development",
+		"thumbnail" : "/images/portfolio/ragnsells.jpg"
+	},
+	{
+		"title" : "Woodmart",
+		"url" : "http://woodmart.lv/",
+		"date" : "2016-03",
+		"task" : "Wordpress Theme development",
+		"thumbnail" : "/images/portfolio/woodmart.jpg"
+	},
+	{
+		"title" : "FlatHouse",
+		"url" : "https://flathouse.lv",
+		"date" : "2017-02",
+		"task" : "Wordpress Theme development",
+		"thumbnail" : "/images/portfolio/flathouse.jpg"
+	},
+	{
+		"title" : "NetCredit.lv",
+		"url" : "http://netcredit.i8.lv",
+		"date" : "2017-04",
+		"task" : "Wordpress Theme development",
+		"thumbnail" : "/images/portfolio/netcredit.jpg"
+	},
+	{
+		"title" : "Somijas Apavi",
+		"url" : "http://89.111.35.43/",
+		"date" : "2017-05",
+		"task" : "Wordpress Theme development",
+		"thumbnail" : "/images/portfolio/somijasapavi.jpg"
+	}
+]

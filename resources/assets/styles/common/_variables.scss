@@ -1,0 +1,36 @@
+// Grid settings
+$main-sm-columns:       12;
+$sidebar-sm-columns:    4;
+$line-height-base: 1.5;
+$headings-line-height: 1.5;
+
+// Colors
+$brand-primary: #4c33fb; // HAN PURPLE
+$brand-alt: #e72f40; //DEEP CARMINE PINK
+$brand-light: #f7fff7; //MINT CREAM
+$brand-light-alt: #DAFFEF; //LIGHT CYAN
+$brand-dark: #2b303a; //GUNMETAL
+
+$brand-danger: $brand-alt;
+$brand-success: #00c866;
+
+$text-muted: lighten($brand-dark, 20%);
+$text-color: $brand-dark;
+$body-color: $brand-dark;
+
+$body-bg: $brand-primary;
+$content-bg: #fff;
+
+$border-color:         #ddd;
+
+$border-radius:        0;
+$btn-border-radius:    $border-radius;
+$input-border-color:   #ddd;
+$input-border-focus:   darken($input-border-color, 10%);
+
+// Font
+$fa-font-path:          '~font-awesome/fonts';
+// $socicon-path:          '~socicon/font';
+$font-family-sans-serif: 'Nunito Sans', sans-serif;
+$font-family: $font-family-sans-serif;
+$font-size-root:       16px;

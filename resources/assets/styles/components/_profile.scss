@@ -1,0 +1,17 @@
+.profile{
+	align-items: center;
+
+	.profile__content{
+		padding-top: 140px;
+	}
+
+	.profile__image{
+		background: #fff;
+		width: 100%;
+		height: 800px;
+
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+}
