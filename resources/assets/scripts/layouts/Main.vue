@@ -3,8 +3,10 @@
         <div id="page-container" :class="{'menu--active' : menuActive}">
             <div id="page">
                 <aside id="sidebar">
-                    <layout-header id="header"></layout-header>
-                    <layout-footer id="footer"></layout-footer>
+                    <div ref="sticky">
+                        <layout-header id="header"></layout-header>
+                        <layout-footer id="footer"></layout-footer>
+                    </div>
                 </aside>
                 <main id="content">
                     <slot></slot>
@@ -21,6 +23,8 @@ import Burger from '../components/Burger.vue'
 import Header from './Header.vue'
 import Footer from './Footer.vue'
 import Menu from './Menu.vue'
+
+import stickybits from 'stickybits'
 
 export default {
     components: {
@@ -47,6 +51,7 @@ export default {
         bus.$on('menu:toggle', function(active){
             self.menuActive = active;
         });
+        stickybits(this.$refs.sticky, {stickyBitStickyOffset: 45})
     }
 }
 </script>
