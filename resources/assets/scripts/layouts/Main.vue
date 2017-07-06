@@ -1,13 +1,14 @@
 <template>
-    <div :class="{'with-columns' : hasColumns, 'invert' : isInvert}">
-        <div id="page-container" :class="{'menu--active' : menuActive}">
-            <div id="page">
-                <aside id="sidebar">
-                    <div ref="sticky">
+    <div>
+        <div id="page" :class="pageClasses">
+            <layout-header id="header" class="hidden-xxl-up"></layout-header>
+            <div id="page-container">
+                <div id="sidebar" class="hidden-xl-down">
+                    <div ref="sticky" class="sticky">
                         <layout-header id="header"></layout-header>
                         <layout-footer id="footer"></layout-footer>
                     </div>
-                </aside>
+                </div>
                 <main id="content">
                     <slot></slot>
                 </main>
@@ -44,6 +45,13 @@ export default {
         },
         isInvert(){
             return _.get(this.$route.meta, 'invert');
+        },
+        pageClasses(){
+            return {
+                'menu--active' : this.menuActive,
+                'with-columns' : this.hasColumns,
+                'invert' : this.isInvert
+            }
         }
     },
     mounted(){

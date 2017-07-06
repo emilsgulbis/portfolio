@@ -34,3 +34,26 @@ $fa-font-path:          '~font-awesome/fonts';
 $font-family-sans-serif: 'Nunito Sans', sans-serif;
 $font-family: $font-family-sans-serif;
 $font-size-root:       16px;
+
+$grid-breakpoints: (
+  // Extra small screen / phone
+  xs: 0,
+  // Small screen / phone
+  sm: 576px,
+  // Medium screen / tablet
+  md: 768px,
+  // Large screen / desktop
+  lg: 992px,
+  // Extra large screen / wide desktop
+  xl: 1200px, 
+  // Extra extra large screen / super hyper huge desktop
+  xxl: 1500px
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1440px
+);

@@ -115,3 +115,13 @@
 		}
 	}
 }
+
+@include media-breakpoint-down('xs'){
+	.portfolio{
+		.portfolio__item{
+			.item__content{
+				padding: 20px;
+			}
+		}
+	}
+}

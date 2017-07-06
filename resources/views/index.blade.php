@@ -8,6 +8,7 @@
     <meta name="description" content="Love to craft beautiful designs into live user interfaces with the best user experience in mind">
     <link rel="icon" href="/favicon.png" sizes="64x64">
     <link rel="stylesheet" href="/css/app.css">
+    <meta name="theme-color" content="#4c33fb">
 </head>
 
 <body>

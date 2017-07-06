@@ -107,3 +107,10 @@
 		}
 	}
 }
+
+@include media-breakpoint-down('xl'){
+	.burger{
+		right:30px;
+		top:31px;
+	}
+}

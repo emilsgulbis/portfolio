@@ -38,7 +38,8 @@
 		width: 120px;
 		border-bottom: 5px solid $brand-dark;
 		top:50%;
-		transform: translate(-60px, -50%)
+		transform: translate(-30px, -50%);
+		transition: .25s width;
 	}
 	&.text-primary{
 		&:before{

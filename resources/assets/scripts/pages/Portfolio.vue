@@ -2,7 +2,7 @@
 	<div>
 		<h1 class="title">Portfolio</h1>
 		<div class="row no-gutters portfolio">
-			<div class="col-md-6" v-for="item in items">
+			<div class="col-md-6 col-lg-6 col-xl-4 col-xxl-6" v-for="item in items">
 				<div class="portfolio__item" :style="{'background-image' : 'url('+item.thumbnail+')'}">
 					<div class="item__content">
 						<p class="item__title">

@@ -55,6 +55,17 @@
 	}
 }
 
+@include media-breakpoint-down('xs'){
+	.menu .nav{
+		.nav-item{
+			font-size: 20px;
+			.nav-link{
+				padding: 10px 30px;
+			}
+		}
+	}
+}
+
 .nav-social{
 	margin-left: -10px;
 	margin-right: -10px;

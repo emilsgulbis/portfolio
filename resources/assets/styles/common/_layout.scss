@@ -7,20 +7,20 @@ body{
     flex-direction: column;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background: #fff !important;
+    // background: #fff !important;
 }
 
 @mixin shadow($opacity : .3){
 	box-shadow: 0 8px 45px rgba(#000, $opacity);
 }
 
-#page-container{
+#page{
 	min-height: 100vh;
 	background: $body-bg;
 	
 	transition: transform .3s, opacity .3s;
 
-	#page{
+	#page-container{
 		display: flex;
 		flex-direction: row;
 		padding-bottom: 45px;
@@ -39,7 +39,7 @@ body{
 		display: flex;
 		flex-direction:column;
 
-		> div{
+		.sticky{
 			display: flex;
 			flex-direction:column;
 			justify-content: space-between;
@@ -82,27 +82,8 @@ body{
 			transform: translateX(-100%)
 		}
 	}
-}
 
-
-.col-primary{
-	width: 520px;
-	flex-basis: auto;
-	flex-grow:0;
-	> * {
-		margin-bottom: 45px;
-		@include shadow();
-		&:last-child{
-			margin-bottom: 0;
-		}
-	}
-	& + .col{
-		padding-left: 80px;
-	}
-}
-
-.with-columns{
-	#page-container{
+	&.with-columns{
 		#content{
 			&:before{
 				transform: translateX(0)
@@ -112,25 +93,69 @@ body{
 			padding-bottom: 45px;
 		}
 	}
-}
 
-.invert{
-	#page-container{
-		background: #fff;
-		#sidebar{
+	&.invert{
+		#page{
 			background: #fff;
-			color: $brand-primary;
+			#sidebar{
+				background: #fff;
+				color: $brand-primary;
+			}
+			#content{
+				background: $brand-primary;
+				color: #fff;
+			}
 		}
-		#content{
-			background: $brand-primary;
-			color: #fff;
+
+		.burger{
+			&:before, &:after, div{
+				border-color: #fff;
+			}
 		}
 	}
 
-	.burger{
-		&:before, &:after, div{
-			border-color: #fff;
+	.col-primary{
+		> * {
+			margin-bottom: 45px;
+			@include shadow();
+			&:last-child{
+				margin-bottom: 0;
+			}
 		}
+	}
+}
+
+@include media-breakpoint-up('xl'){
+	.col-primary{
+		width: 520px;
+		flex-basis: auto;
+		flex-grow:0;
+		& + .col{
+			padding-left: 45px;
+		}
+	}
+}
+
+@include media-breakpoint-down('xl'){
+	#header{
+		background: #fff;
+		color: #fff;
+		.header-content{
+			display: block;
+			margin-right: 90px;
+			padding: 15px 90px 15px 15px;
+			background: $brand-primary;
+		}
+	}
+
+	#page #content:before{
+		display: none;
+	}
+}
+
+@include media-breakpoint-down('xs'){
+	#page #content{
+		padding: 35px 20px 15px;
 	}
 }
 

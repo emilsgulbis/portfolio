@@ -1,13 +1,4 @@
 .list-group{
-	&.list-group-vertical{
-		flex-direction:row;
-		flex-wrap:wrap;
-
-		.list-group-item{
-			flex: 0 0 50%;
-		max-width: 50%;
-		}
-	}
 	.list-group-item{
 		margin-bottom: 30px;
 		background: none;
@@ -22,20 +13,10 @@
 			font-weight: bold;
 			display: block;
 		}
+
 		.item-date{
 			font-size: 14px;
-			position: absolute;
-			bottom:100%;
-			right: 45px;
-			background: $brand-primary;
-			padding: 10px 25px;
-			font-weight: 600;
-			color: #fff;
-			box-shadow: 0 -2px 5px rgba(#000, .2);
-
-			opacity: 0;
-			transition: .25s opacity, .25s transform;
-			margin-bottom: 0;
+			color: $text-muted;
 		}
 
 		p{
@@ -46,37 +27,93 @@
 			color: inherit;
 		}
 
-		> :last-child{
-			margin-bottom: 0;
+		&:hover{
+			.list-group-item{
+				&:first-child{
+					@include shadow(0);
+				}
+				&:hover{
+					@include shadow(.15);
+				}
+			}
 		}
-		
+
+
 		@include shadow(0);
 		&:first-child{
 			@include shadow(.15);
-			.item-date{
-				opacity: 1;
-				transform: translateY(50%);
+		}
+
+		> :last-child{
+			margin-bottom: 0;
+		}
+	}
+}
+
+@include media-breakpoint-up('lg'){
+	.list-group{
+		&.list-group-vertical{
+			flex-direction:row;
+			flex-wrap:wrap;
+			.list-group-item{
+				flex: 0 0 50%;
+				max-width: 50%;
 			}
 		}
 	}
+}
 
-	&:hover{
+@include media-breakpoint-up('sm'){
+	.list-group{
 		.list-group-item{
-			
-			&:first-child{
-				@include shadow(0);
-				.item-date{
-					opacity: 0;
-					transform: translateY(0);
+			.item-date{
+				font-size: 14px;
+				position: absolute;
+				bottom:100%;
+				right: 45px;
+				background: $brand-primary;
+				padding: 10px 25px;
+				font-weight: 600;
+				color: #fff;
+				box-shadow: 0 -2px 5px rgba(#000, .2);
+
+				opacity: 0;
+				transition: .25s opacity, .25s transform;
+				margin-bottom: 0;
+			}
+
+			&:hover{
+				.list-group-item{
+					&:first-child{
+						.item-date{
+							opacity: 0;
+							transform: translateY(0);
+						}
+					}
+					&:hover{
+						.item-date{
+							opacity: 1;
+							transform: translateY(50%);
+						}
+					}
 				}
 			}
-			&:hover{
-				@include shadow(.15);
+
+			&:first-child{
 				.item-date{
 					opacity: 1;
 					transform: translateY(50%);
 				}
 			}
+		}
+	}
+}
+
+@include media-breakpoint-down('xs'){
+	.list-group{
+		.list-group-item{
+			margin-bottom: 20px;
+			padding: 15px;
 		}
 	}
 }

@@ -31,6 +31,15 @@
 	}
 }
 
+@include media-breakpoint-down('xs'){
+	.form--contacts{
+		padding: 30px 20px;
+		legend{
+			margin-bottom: 30px;
+		}
+	}
+}
+
 .form-group{
 	position: relative;
 	margin-bottom: 35px;

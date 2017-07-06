@@ -1,11 +1,11 @@
 <template>
 	<div>
-		<div class="row no-gutters row-bg">
-			<div class="col col-primary">
+		<div class="row">
+			<div class="col-lg-6 col-primary">
 				<contact-form></contact-form>
 				<map-canvas position="56.484392,21.017387" zoom="4" icon="/images/mapmarker.png"></map-canvas>
 			</div>
-			<div class="col">
+			<div class="col-lg-6 flex-first flex-lg-unordered">
 				<h1 class="title title--spaced">Contact me</h1>
 				
 				<div class="list-group">

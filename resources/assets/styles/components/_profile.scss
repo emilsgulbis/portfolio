@@ -3,15 +3,47 @@
 
 	.profile__content{
 		padding-top: 140px;
+		transition: .4s padding;
 	}
 
 	.profile__image{
 		background: #fff;
 		width: 100%;
-		height: 800px;
+		padding-bottom: 153%;
 
 		background-size: cover;
 		background-position: center;
 		background-repeat: no-repeat;
+	}
+}
+
+
+@include media-breakpoint-down('lg'){
+	.profile{
+		.col-primary{
+			padding-right: 30px;
+		}
+		.profile__content{
+			transform: translate(0,0) !important;
+			padding-top: 0;
+			.title .point-to-left:before{
+				width: 45px;
+				// display: none;
+			}
+		}
+	}
+}
+
+@include media-breakpoint-down('xs'){
+	.profile{
+		.col-primary{
+			padding-right: 15px;
+		}
+		.profile__content{
+			padding-top: 45px;
+			.title .point-to-left:before{
+				display: none;
+			}
+		}
 	}
 }
