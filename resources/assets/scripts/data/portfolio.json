@@ -49,10 +49,10 @@
 		"thumbnail" : "/images/portfolio/netcredit.jpg"
 	},
 	{
-		"title" : "Somijas Apavi",
-		"url" : "http://89.111.35.43/",
-		"date" : "2017-05",
-		"task" : "Wordpress Theme development",
-		"thumbnail" : "/images/portfolio/somijasapavi.jpg"
+		"title" : "kurp.es",
+		"url" : "http://kurpes.lv/",
+		"date" : "2017-010",
+		"task" : "SPA - React, Postgres, Graphql",
+		"thumbnail" : "/images/portfolio/kurpes.jpg"
 	}
 ]
