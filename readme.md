@@ -19,3 +19,32 @@ If you discover a security vulnerability within Lumen, please send an e-mail to 
 ## License
 
 The Lumen framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+
+## Setting up this portfolio locally(Installation)
+- Download the code via Git
+
+  ```
+  git clone https://github.com/emilsgulbis/portfolio 
+  cd portfolio
+  ```
+
+- Install the required packages
+
+  ```
+  composer install
+  ```
+
+- Install the node modules
+
+  ```
+  npm install
+  ```
+  ## Serving Your Application
+  ``` 
+    php -S localhost:8000 -t public
+  ```
+  
+  
+
+
+
