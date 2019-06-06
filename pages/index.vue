@@ -2,14 +2,16 @@
   <div>
     <div v-mouse-move>
       <h1 class="text-black uppercase font-extrabold text-40px leading-none">
-        Emils <span class="text-blue block">Gulbis</span>
+        {{ firstName }} <span class="text-blue block">{{ lastName }}</span>
       </h1>
-      <h2>Front-end developer - Latvia</h2>
+      <h2>{{ position }}</h2>
       <p class="text-gray">
-        I'm Emils Gulbis and I love to develop <br />
-        beautiful UI's. <br />
+        {{ aboutMe }}.
+        <br />
         {{ age }} year old code ninja from
-        <nuxt-link to="/contact" class="text-blue">Liepaja, Latvia</nuxt-link>
+        <nuxt-link to="/contact" class="text-blue">
+          {{ location.city }}, {{ location.country }}
+        </nuxt-link>
       </p>
     </div>
 
@@ -23,15 +25,33 @@
 <script>
 import { getAge } from '~/utils/functions'
 import { mouseMove } from '~/utils/directives'
+import {
+  firstName,
+  lastName,
+  position,
+  birthday,
+  aboutMe,
+  location
+} from '~/config/site.yml'
 
 export default {
   directives: {
     mouseMove
   },
 
+  data() {
+    return {
+      firstName,
+      lastName,
+      position,
+      aboutMe,
+      location
+    }
+  },
+
   computed: {
     age() {
-      return getAge('1993/04/15')
+      return getAge(birthday)
     }
   }
 }

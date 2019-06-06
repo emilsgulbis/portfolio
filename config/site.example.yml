@@ -1,0 +1,23 @@
+# Profile
+firstName: 
+lastName: 
+phone: 
+email: 
+location:
+  address: 
+  city: 
+  country: 
+position: 
+birthday: 
+aboutMe:
+
+# Social
+facebook:
+twitter:
+github: 
+linkedin: 
+stackoverflow:
+
+# Keys
+google_analytics: "UA-#########-1"
+google_maps_key: "#####################################" 

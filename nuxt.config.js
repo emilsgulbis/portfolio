@@ -15,7 +15,7 @@ export default {
       { hid: 'description', name: 'description', content: pkg.description }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: '/favico.png' },
     ],
   },
 
@@ -76,9 +76,10 @@ export default {
    */
   build: {
     extractCSS: true, // if you use purgeCSS
+
     postcss: {
       plugins: {
-        tailwindcss: path.resolve(__dirname, './tailwind.config.js'),
+        tailwindcss: path.resolve(__dirname, './assets/tailwind.config.js'),
         cssnano: {
           preset: 'default',
           discardComments: { removeAll: true },
@@ -94,7 +95,12 @@ export default {
         }
       }
     },
+
     extend(config, ctx) {
+      config.module.rules.push({
+        test: /\.ya?ml$/,
+        use: 'js-yaml-loader',
+      })
       // Run ESLint on save
       if (ctx.isDev && ctx.isClient) {
         config.module.rules.push({
