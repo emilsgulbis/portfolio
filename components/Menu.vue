@@ -1,33 +1,35 @@
 <template>
   <div>
-    <burger v-model="isOpen" />
+    <div class="absolute right-0 top-0">
+      <burger v-model="isOpen" class="z-20" />
+    </div>
 
     <transition name="fadeScale">
-      <nav v-if="isOpen">
-        <ul>
-          <li>
-            <nuxt-link to="/">About me</nuxt-link>
-          </li>
-          <li>
-            <nuxt-link to="/resume">Resume</nuxt-link>
-          </li>
-          <li>
-            <nuxt-link to="/portfolio">Portfolio</nuxt-link>
-          </li>
-          <!-- <li class="nav-item">
-            <nuxt-link class="nav-link" to="/blog">Blog</nuxt-link>
-          </li> -->
-          <li>
-            <nuxt-link to="/contact">Contact me</nuxt-link>
-          </li>
-        </ul>
-      </nav>
+      <div
+        v-if="isOpen"
+        class="fixed inset-0 z-10 bg-black-90 flex justify-center items-center p-8"
+      >
+        <nav>
+          <ul>
+            <li v-for="link in links" :key="link.to" @click="isOpen = false">
+              <nuxt-link
+                :to="link.to"
+                class="relative uppercase text-4xl text-white text-center font-bold px-10 py-2 block"
+                exact-active-class="border border-white"
+              >
+                {{ link.title }}
+              </nuxt-link>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </transition>
   </div>
 </template>
 
 <script>
 import Burger from '~/components/Burger'
+import { links } from '~/utils/lists'
 
 export default {
   components: {
@@ -36,7 +38,8 @@ export default {
 
   data() {
     return {
-      isOpen: false
+      isOpen: false,
+      links
     }
   }
 }

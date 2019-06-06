@@ -35,7 +35,10 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['~/assets/css/tailwind.css'],
+  css: [
+    '~/assets/css/tailwind.css',
+    '~/assets/css/transitions.scss'
+  ],
 
   /*
    ** Plugins to load before mounting the App
@@ -49,12 +52,23 @@ export default {
     '@nuxtjs/pwa',
     'nuxt-purgecss',
     'nuxt-webfontloader',
+    'nuxt-fontawesome'
   ],
   
   webfontloader: {
     google: {
       families: ['Nunito+Sans:300,400,700,800'] //Loads Lato font with weights 400 and 700
     }
+  },
+
+  fontawesome: {
+    component: 'fa',
+    imports: [
+      {
+        set:'@fortawesome/free-brands-svg-icons',
+        icons: ['fab']
+      }
+    ]
   },
 
   /*
