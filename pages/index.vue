@@ -2,7 +2,8 @@
   <div>
     <div v-mouse-move>
       <h1 class="text-black uppercase font-extrabold text-40px leading-none">
-        {{ firstName }} <span class="text-blue block">{{ lastName }}</span>
+        {{ firstName }}
+        <span class="text-blue block">{{ lastName }}</span>
       </h1>
       <h2>{{ position }}</h2>
       <p class="text-gray">

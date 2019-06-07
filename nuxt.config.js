@@ -8,15 +8,13 @@ export default {
    ** Headers of the page
    */
   head: {
-    title: pkg.name,
+    title: 'Emīls Gulbis | Front-end developer',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: pkg.description }
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favico.png' },
-    ],
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favico.png' }]
   },
 
   /*
@@ -25,20 +23,13 @@ export default {
   loading: { color: '#fff' },
 
   generate: {
-    routes: [
-      '/resume',
-      '/portfolio',
-      '/contact'
-    ]
+    routes: ['/resume', '/portfolio', '/contact']
   },
 
   /*
    ** Global CSS
    */
-  css: [
-    '~/assets/css/tailwind.css',
-    '~/assets/css/transitions.scss'
-  ],
+  css: ['~/assets/css/tailwind.css', '~/assets/css/custom.scss'],
 
   /*
    ** Plugins to load before mounting the App
@@ -54,10 +45,10 @@ export default {
     'nuxt-webfontloader',
     'nuxt-fontawesome'
   ],
-  
+
   webfontloader: {
     google: {
-      families: ['Nunito+Sans:300,400,700,800'] //Loads Lato font with weights 400 and 700
+      families: ['Nunito+Sans:300,400,700,800'] // Loads Lato font with weights 400 and 700
     }
   },
 
@@ -65,7 +56,7 @@ export default {
     component: 'fa',
     imports: [
       {
-        set:'@fortawesome/free-brands-svg-icons',
+        set: '@fortawesome/free-brands-svg-icons',
         icons: ['fab']
       }
     ]
@@ -99,7 +90,7 @@ export default {
     extend(config, ctx) {
       config.module.rules.push({
         test: /\.ya?ml$/,
-        use: 'js-yaml-loader',
+        use: 'js-yaml-loader'
       })
       // Run ESLint on save
       if (ctx.isDev && ctx.isClient) {
@@ -107,7 +98,10 @@ export default {
           enforce: 'pre',
           test: /\.(js|vue)$/,
           loader: 'eslint-loader',
-          exclude: /(node_modules)/
+          exclude: /(node_modules)/,
+          options: {
+            fix: true
+          }
         })
       }
     }

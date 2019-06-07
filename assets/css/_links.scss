@@ -1,0 +1,23 @@
+.hover\:border {
+  position: relative;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 100%;
+    width: 0;
+    left: 50%;
+
+    border-bottom: 1px solid white;
+
+    transform: translateX(-50%);
+    transition: width 0.25s;
+  }
+
+  &:not(.border):hover {
+    &::after {
+      width: 120px;
+    }
+  }
+}
