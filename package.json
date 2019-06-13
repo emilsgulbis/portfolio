@@ -24,7 +24,7 @@
     "@nuxtjs/eslint-config": "^0.0.1",
     "@nuxtjs/tailwindcss": "^1.1.0",
     "@vue/test-utils": "^1.0.0-beta.27",
-    "autoprefixer": "^8.6.4",
+    "autoprefixer": "^9.6.0",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^24.1.0",
