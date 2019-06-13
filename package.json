@@ -18,7 +18,7 @@
     "@nuxtjs/pwa": "^2.6.0",
     "cross-env": "^5.2.0",
     "nuxt": "^2.4.0",
-    "nuxt-fontawesome": "^0.4.0"
+    "nuxt-svg": "^0.1.4"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^0.0.1",

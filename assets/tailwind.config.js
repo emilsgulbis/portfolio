@@ -18,7 +18,7 @@ module.exports = {
 
       spacing: {
         '45px': '45px',
-        '150%': '150%'
+        '150': '150%'
       },
 
       borderWidth: {
@@ -56,7 +56,7 @@ module.exports = {
         '120px': '120px',
         '30px': '30px',
         '490px': '490px'
-      }
+      },
     }
   },
   variants: {},

@@ -2,8 +2,8 @@
   <div class="flex items-center">
     <div class="w-490px flex-grow-0">
       <div
-        class="bg-center bg-cover bg-no-repeat pb-150% shadow-2xl"
-        style="background-image:url(/emilsgulbis.jpg)"
+        id="photo"
+        class="bg-center bg-white bg-cover bg-no-repeat pb-150 shadow-2xl"
       ></div>
     </div>
     <div v-mouse-move class="flex-1 pl-8 pt-16">
@@ -67,5 +67,8 @@ export default {
 <style scoped>
 .line-transform {
   transform: translate(-25px, -50%);
+}
+#photo {
+  background-image: url('~assets/images/emilsgulbis.jpg');
 }
 </style>

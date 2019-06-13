@@ -24,7 +24,7 @@
           <ul class="flex">
             <li class="mr-4">
               <a href="https://www.facebook.com/emiils" target="_blank">
-                <fa :icon="['fab', 'facebook']" />
+                <facebook-icon class="svg-inline" />
               </a>
             </li>
 
@@ -33,19 +33,19 @@
                 href="https://www.linkedin.com/in/emilsgulbis/"
                 target="_blank"
               >
-                <fa :icon="['fab', 'linkedin']" />
+                <linkedin-icon class="svg-inline" />
               </a>
             </li>
 
             <li class="mr-4">
               <a href="https://twitter.com/yozhis" target="_blank">
-                <fa :icon="['fab', 'twitter']" />
+                <twitter-icon class="svg-inline" />
               </a>
             </li>
 
             <li>
               <a href="https://github.com/emilsgulbis" target="_blank">
-                <fa :icon="['fab', 'github']" />
+                <github-icon class="svg-inline" />
               </a>
             </li>
           </ul>
@@ -57,10 +57,18 @@
 
 <script>
 import Logo from '~/components/Logo'
+import FacebookIcon from '~/assets/icons/facebook.svg?inline'
+import LinkedinIcon from '~/assets/icons/linkedin.svg?inline'
+import TwitterIcon from '~/assets/icons/twitter.svg?inline'
+import GithubIcon from '~/assets/icons/github.svg?inline'
 
 export default {
   components: {
-    Logo
+    Logo,
+    FacebookIcon,
+    LinkedinIcon,
+    TwitterIcon,
+    GithubIcon
   }
 }
 </script>

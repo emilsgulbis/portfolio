@@ -46,7 +46,7 @@ export default {
     '@nuxtjs/pwa',
     'nuxt-purgecss',
     'nuxt-webfontloader',
-    'nuxt-fontawesome'
+    'nuxt-svg'
   ],
 
   devModules: [
@@ -62,16 +62,6 @@ export default {
     google: {
       families: ['Nunito+Sans:300,400,700,800'] // Loads Lato font with weights 400 and 700
     }
-  },
-
-  fontawesome: {
-    component: 'fa',
-    imports: [
-      {
-        set: '@fortawesome/free-brands-svg-icons',
-        icons: ['fab']
-      }
-    ]
   },
 
   /*
