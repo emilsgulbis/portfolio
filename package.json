@@ -48,7 +48,7 @@
     "nuxt-webfontloader": "^1.1.0",
     "prettier": "^1.16.4",
     "sass-loader": "^7.1.0",
-    "tailwindcss": "^1.0.3",
+    "tailwindcss": "^1.0.4",
     "vue-jest": "^3.0.3"
   }
 }
