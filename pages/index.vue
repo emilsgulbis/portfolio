@@ -2,14 +2,19 @@
   <div class="flex items-center">
     <div class="w-490px flex-grow-0">
       <div
-        class="bg-center bg-cover bg-no-repeat pb-150% shadow-lg"
+        class="bg-center bg-cover bg-no-repeat pb-150% shadow-2xl"
         style="background-image:url(/emilsgulbis.jpg)"
       ></div>
     </div>
     <div v-mouse-move class="flex-1 pl-8 pt-16">
       <h1 class="text-black uppercase font-extrabold text-40px leading-none">
         {{ firstName }}
-        <span class="text-blue block">{{ lastName }}</span>
+        <div class="relative">
+          <div
+            class="absolute w-120px right-100 top-50 border-blue border-b-5 line-transform"
+          ></div>
+          <span class="text-blue">{{ lastName }}</span>
+        </div>
       </h1>
       <h2>{{ position }}</h2>
       <p class="text-gray">
@@ -58,3 +63,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.line-transform {
+  transform: translate(-25px, -50%);
+}
+</style>

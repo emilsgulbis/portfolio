@@ -14,13 +14,16 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: pkg.description }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favico.png' }]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favico.png' }],
+    bodyAttrs: {
+      class: 'bg-blue'
+    },
   },
 
   /*
    ** Customize the progress-bar color
    */
-  loading: { color: '#fff' },
+  loading: { color: '#4c33fb' },
 
   generate: {
     routes: ['/resume', '/portfolio', '/contact']
@@ -29,7 +32,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['~/assets/css/tailwind.css', '~/assets/css/custom.scss'],
+  css: ['~/assets/css/custom.scss'],
 
   /*
    ** Plugins to load before mounting the App
@@ -45,6 +48,15 @@ export default {
     'nuxt-webfontloader',
     'nuxt-fontawesome'
   ],
+
+  devModules: [
+    '@nuxtjs/tailwindcss'
+  ],
+
+  tailwindcss: {
+    configPath: '~/assets/tailwind.config.js',
+    cssPath: '~/assets/css/tailwind.css'
+  },
 
   webfontloader: {
     google: {
@@ -66,27 +78,6 @@ export default {
    ** Build configuration
    */
   build: {
-    extractCSS: true, // if you use purgeCSS
-
-    postcss: {
-      plugins: {
-        tailwindcss: path.resolve(__dirname, './assets/tailwind.config.js'),
-        cssnano: {
-          preset: 'default',
-          discardComments: { removeAll: true },
-          zIndex: false
-        }
-      },
-      // Change the postcss-preset-env settings
-      preset: {
-        stage: 0, // enable all (experimental) polyfills
-        autoprefixer: {
-          cascade: false,
-          grid: true
-        }
-      }
-    },
-
     extend(config, ctx) {
       config.module.rules.push({
         test: /\.ya?ml$/,
