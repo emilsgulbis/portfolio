@@ -50,7 +50,8 @@ module.exports = {
       '48': '12rem',
       '56': '14rem',
       '64': '16rem',
-      '45px': '45px'
+      '45px': '45px',
+      '150%': '150%'
     },
 
     backgroundColor: theme => theme('colors'),
@@ -235,7 +236,7 @@ module.exports = {
       '4xl': '56rem',
       '5xl': '64rem',
       '6xl': '72rem',
-      full: '100%'
+      full: '100%',
     },
 
     minHeight: {
@@ -327,7 +328,9 @@ module.exports = {
       full: '100%',
       screen: '100vw',
       '280px': '280px',
-      '30px': '30px'
+      '185px': '185px',
+      '30px': '30px',
+      '490px': '490px'
     }),
 
     zIndex: {

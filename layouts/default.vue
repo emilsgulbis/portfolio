@@ -1,11 +1,17 @@
 <template>
   <div class="flex bg-blue min-h-screen">
     <sidebar />
-    <div class="p-45px flex-1 bg-white mb-10">
-      <main class="relative">
+    <div class="p-45px flex-1 bg-white mb-10 relative">
+      <div
+        class="w-0 absolute top-0 left-0 h-full bg-blue transition-width-250"
+        :class="{ 'w-185px': expandSidebar }"
+      ></div>
+      <div class="relative">
         <app-menu />
-        <nuxt />
-      </main>
+        <main>
+          <nuxt />
+        </main>
+      </div>
     </div>
   </div>
 </template>
@@ -18,6 +24,13 @@ export default {
   components: {
     Sidebar,
     AppMenu
+  },
+
+  computed: {
+    expandSidebar() {
+      // return this.$route.name
+      return ['index', 'contact'].includes(this.$route.name)
+    }
   }
 }
 </script>

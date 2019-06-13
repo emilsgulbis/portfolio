@@ -11,18 +11,32 @@
   }
 }
 
-.slideUp-enter-active, .slideUp-leave-active {
-  transition: opacity .3s, transform .3s;
-}
-.slideUp-enter, .slideUp-leave-to /* .fade-leave-active in <2.1.8 */ {
-	opacity: 0;
-	transform: translateY(5px)
+.slideUp {
+  &-enter,
+  &-leave-to {
+    opacity: 0;
+    transform: translateY(5px)
+  }
+
+  &-enter-active,
+  &-leave-active {
+    transition: opacity 0.3s, transform 0.3s;
+  }
 }
 
-.slideDown-enter-active, .slideDown-leave-active {
-  transition: opacity .3s, transform .3s;
+.slideDown {
+  &-enter,
+  &-leave-to {
+    opacity: 0;
+    transform: translateY(-50px)
+  }
+
+  &-enter-active,
+  &-leave-active {
+    transition: opacity 0.3s, transform 0.3s;
+  }
 }
-.slidDown-enter, .slideDown-leave-to /* .fade-leave-active in <2.1.8 */ {
-	opacity: 0;
-	transform: translateY(-50px)
+
+.transition-width-250 {
+  transition: 250ms width;
 }

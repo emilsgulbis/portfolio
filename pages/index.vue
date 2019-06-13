@@ -1,6 +1,12 @@
 <template>
-  <div>
-    <div v-mouse-move>
+  <div class="flex items-center">
+    <div class="w-490px flex-grow-0">
+      <div
+        class="bg-center bg-cover bg-no-repeat pb-150% shadow-lg"
+        style="background-image:url(/emilsgulbis.jpg)"
+      ></div>
+    </div>
+    <div v-mouse-move class="flex-1 pl-8 pt-16">
       <h1 class="text-black uppercase font-extrabold text-40px leading-none">
         {{ firstName }}
         <span class="text-blue block">{{ lastName }}</span>
@@ -9,17 +15,12 @@
       <p class="text-gray">
         {{ aboutMe }}.
         <br />
-        {{ age }} year old code ninja from
-        <nuxt-link to="/contact" class="text-blue">
+        {{ age }} year old front-end developer from
+        <nuxt-link to="/contact" class="text-blue link">
           {{ location.city }}, {{ location.country }}
         </nuxt-link>
       </p>
     </div>
-
-    <div
-      class="w-8 h-8 bg-center bg-cover bg-no-repeat"
-      style="background-image:url(/emilsgulbis.jpg)"
-    ></div>
   </div>
 </template>
 
@@ -33,7 +34,7 @@ import {
   birthday,
   aboutMe,
   location
-} from '~/config/site.yml'
+} from '~/config/profile.yml'
 
 export default {
   directives: {

@@ -21,3 +21,26 @@
     }
   }
 }
+
+.link {
+  position: relative;
+  
+  &::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-12px);
+    opacity: .2;
+    border-bottom: 3px solid #4c33fb;
+    transition: transform .25s,opacity .25s;
+  }
+
+  &:hover {
+    &::after {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}
