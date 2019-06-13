@@ -7,7 +7,9 @@
       ></div>
     </div>
     <div v-mouse-move class="flex-1 pl-8 pt-16">
-      <h1 class="text-black uppercase font-extrabold text-40px leading-none">
+      <h1
+        class="text-black uppercase font-extrabold text-4xl leading-none mb-5"
+      >
         {{ firstName }}
         <div class="relative">
           <div
@@ -16,7 +18,7 @@
           <span class="text-blue">{{ lastName }}</span>
         </div>
       </h1>
-      <h2>{{ position }}</h2>
+      <h2 class="mb-2">{{ position }}</h2>
       <p class="text-gray">
         {{ aboutMe }}.
         <br />

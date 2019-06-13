@@ -15,7 +15,7 @@
               <nuxt-link
                 :to="link.to"
                 :aria-lable="link.label"
-                class="relative uppercase text-4xl text-white text-center font-bold px-10 py-2 block hover:border"
+                class="relative uppercase text-3xl text-white text-center font-bold px-10 py-2 block hover:border"
                 exact-active-class="border border-white-20"
               >
                 {{ link.title }}

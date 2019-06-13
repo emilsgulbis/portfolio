@@ -17,7 +17,6 @@ module.exports = {
       },
 
       spacing: {
-        '45px': '45px',
         '150': '150%'
       },
 
@@ -31,10 +30,6 @@ module.exports = {
 
       fontFamily: {
         sans: ['Nunito', 'sans-serif']
-      },
-
-      fontSize: {
-        '40px': '40px'
       },
 
       height: {
@@ -51,10 +46,10 @@ module.exports = {
       },
 
       width: {
-        '280px': '280px',
-        '185px': '185px',
-        '120px': '120px',
         '30px': '30px',
+        '120px': '120px',
+        '185px': '185px',
+        '280px': '280px',
         '490px': '490px'
       },
     }

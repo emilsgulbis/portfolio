@@ -1,4 +1,5 @@
 import pkg from './package'
+import { links } from './utils/lists'
 const path = require('path')
 
 export default {
@@ -16,7 +17,7 @@ export default {
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favico.png' }],
     bodyAttrs: {
-      class: 'bg-blue'
+      class: 'bg-blue antialiased'
     },
   },
 
@@ -26,7 +27,7 @@ export default {
   loading: { color: '#4c33fb' },
 
   generate: {
-    routes: ['/resume', '/portfolio', '/contact']
+    routes: links.map(link => link.to)
   },
 
   /*
