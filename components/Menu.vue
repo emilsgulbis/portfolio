@@ -14,6 +14,7 @@
             <li v-for="link in links" :key="link.to" @click="isOpen = false">
               <nuxt-link
                 :to="link.to"
+                :aria-lable="link.label"
                 class="relative uppercase text-4xl text-white text-center font-bold px-10 py-2 block hover:border"
                 exact-active-class="border border-white-20"
               >
