@@ -21,7 +21,7 @@
     "nuxt-svg": "^0.1.4"
   },
   "devDependencies": {
-    "@nuxtjs/eslint-config": "^0.0.1",
+    "@nuxtjs/eslint-config": "^1.0.1",
     "@nuxtjs/tailwindcss": "^1.1.0",
     "@vue/test-utils": "^1.0.0-beta.27",
     "autoprefixer": "^8.6.4",
