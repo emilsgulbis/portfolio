@@ -1,4 +1,18 @@
 ---
 label: Project
 hide_body: false
-fields: []
+fields:
+- name: title
+  type: text
+  config:
+    required: true
+  label: Title
+- name: url
+  type: text
+  config:
+    required: false
+  label: URL
+- name: stack
+  type: tag_list
+  default: []
+  label: Stack
