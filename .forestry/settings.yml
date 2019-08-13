@@ -5,11 +5,13 @@ admin_path:
 webhook_url: 
 sections:
 - type: directory
-  path: ''
+  path: projects
   label: Projects
   create: documents
   match: "**/*"
   new_doc_ext: json
+  templates:
+  - project
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
