@@ -16,3 +16,5 @@ fields:
   type: tag_list
   default: []
   label: Stack
+pages:
+- projects/kurp-es.json
