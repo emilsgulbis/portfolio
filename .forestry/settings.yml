@@ -9,7 +9,7 @@ sections:
   label: Projects
   create: documents
   match: "**/*"
-  new_doc_ext: ''
+  new_doc_ext: '20190813143609'
   templates:
   - project
 upload_dir: uploads

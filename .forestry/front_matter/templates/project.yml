@@ -17,4 +17,5 @@ fields:
   default: []
   label: Stack
 pages:
+- projects/kurp-es.20190813143609
 - projects/kurp-es.json
