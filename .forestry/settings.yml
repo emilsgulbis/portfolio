@@ -9,7 +9,7 @@ sections:
   label: Projects
   create: documents
   match: "**/*"
-  new_doc_ext: json
+  new_doc_ext: ''
   templates:
   - project
 upload_dir: uploads
