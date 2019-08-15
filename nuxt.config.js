@@ -45,13 +45,13 @@ export default {
    */
   modules: [
     '@nuxtjs/pwa',
-    'nuxt-purgecss',
     'nuxt-webfontloader',
     'nuxt-svg'
   ],
 
   devModules: [
-    '@nuxtjs/tailwindcss'
+    '@nuxtjs/tailwindcss',
+    'nuxt-purgecss'
   ],
 
   tailwindcss: {
