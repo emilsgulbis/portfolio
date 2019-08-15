@@ -1427,7 +1427,7 @@
     url-loader "^2.0.0"
     vue-svg-loader "^0.12.0"
 
-"@nuxtjs/tailwindcss@^1.1.0":
+"@nuxtjs/tailwindcss@^1.1.2":
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/@nuxtjs/tailwindcss/-/tailwindcss-1.1.2.tgz#fb1c687c4f72797388f8c6a49a6e376f634ac7ff"
   integrity sha512-/zda1/42glYtdNcZRPwu6WyKPOSmTTTVY1jXCM4ZrPrXqyH7aXb+C5LwS7ujM2UYm5D7rPECqMnTKaI1m3F4dg==
