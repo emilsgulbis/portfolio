@@ -43,16 +43,9 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: [
-    '@nuxtjs/pwa',
-    'nuxt-webfontloader',
-    'nuxt-svg'
-  ],
+  modules: ['@nuxtjs/pwa', 'nuxt-webfontloader', '@nuxtjs/svg'],
 
-  devModules: [
-    '@nuxtjs/tailwindcss',
-    'nuxt-purgecss'
-  ],
+  devModules: ['@nuxtjs/tailwindcss', 'nuxt-purgecss', '@nuxtjs/eslint-module'],
 
   tailwindcss: {
     configPath: '~/assets/tailwind.config.js',
@@ -65,27 +58,7 @@ export default {
     }
   },
 
-  /*
-   ** Build configuration
-   */
-  build: {
-    extend(config, ctx) {
-      config.module.rules.push({
-        test: /\.ya?ml$/,
-        use: 'js-yaml-loader'
-      })
-      // Run ESLint on save
-      if (ctx.isDev && ctx.isClient) {
-        config.module.rules.push({
-          enforce: 'pre',
-          test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
-          exclude: /(node_modules)/,
-          options: {
-            fix: true
-          }
-        })
-      }
-    }
+  eslint: {
+    fix: true
   }
 }

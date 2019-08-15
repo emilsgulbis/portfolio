@@ -1,7 +1,7 @@
 import { getWindowWidth, getWindowHeight } from './functions'
 
 export const mouseMove = {
-  inserted: function(el) {
+  inserted(el) {
     const movementStrength = 15
     const height = movementStrength / getWindowHeight()
     const width = movementStrength / getWindowWidth()

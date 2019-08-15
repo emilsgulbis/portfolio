@@ -1,0 +1,14 @@
+{
+  "firstName": "Emils",
+  "lastName": "Gulbis",
+  "phone": "+37120303056",
+  "email": "emils.gulbis@gmail.com",
+  "location": {
+    "address": "Kurmajas prospekts 7",
+    "city": "Liepaja",
+    "country": "Latvia"
+  },
+  "position": "Front-end developer",
+  "birthday": "1993/04/15",
+  "aboutMe": "I love to develop \n beautiful UI's"
+}

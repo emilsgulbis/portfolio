@@ -95,7 +95,7 @@ import {
   twitter,
   github,
   stackoverflow
-} from '~/config/social.yml'
+} from '~/docs/social.json'
 
 export default {
   components: {

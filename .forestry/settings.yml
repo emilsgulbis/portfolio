@@ -1,11 +1,11 @@
 ---
 new_page_extension: md
 auto_deploy: false
-admin_path: 
-webhook_url: 
+admin_path:
+webhook_url:
 sections:
 - type: directory
-  path: projects
+  path: docs/projects
   label: Projects
   create: documents
   match: "**/*"

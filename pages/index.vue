@@ -41,7 +41,7 @@ import {
   birthday,
   aboutMe,
   location
-} from '~/config/profile.yml'
+} from '~/docs/profile.json'
 
 export default {
   directives: {
