@@ -3,7 +3,7 @@
     <div class="w-490px flex-grow-0">
       <div
         id="photo"
-        class="bg-center bg-white bg-cover bg-no-repeat pb-150 shadow-2xl"
+        class="bg-center bg-white bg-cover bg-no-repeat pb-150 shadow"
       ></div>
     </div>
     <div v-mouse-move class="flex-1 pl-8 pt-16">
@@ -20,12 +20,7 @@
       </h1>
       <h2 class="mb-2">{{ position }}</h2>
       <p class="text-gray">
-        {{ aboutMe }}.
-        <br />
-        {{ age }} year old front-end developer from
-        <nuxt-link to="/contact" class="text-blue link">
-          {{ location.city }}, {{ location.country }}
-        </nuxt-link>
+        {{ aboutMe }}
       </p>
     </div>
   </div>
@@ -39,8 +34,7 @@ import {
   lastName,
   position,
   birthday,
-  aboutMe,
-  location
+  aboutMe
 } from '~/docs/profile.json'
 
 export default {
@@ -53,8 +47,7 @@ export default {
       firstName,
       lastName,
       position,
-      aboutMe,
-      location
+      aboutMe
     }
   },
 
