@@ -46,7 +46,7 @@
     "nuxt-purgecss": "^0.2.1",
     "nuxt-webfontloader": "^1.1.0",
     "prettier": "^1.18.2",
-    "sass-loader": "^7.2.0",
+    "sass-loader": "^10.0.2",
     "tailwindcss": "^1.1.2",
     "vue-jest": "^3.0.3"
   }
