@@ -82,7 +82,6 @@
 </template>
 
 <script>
-import Logo from '~/components/Logo'
 import FacebookIcon from '~/assets/icons/facebook.svg?inline'
 import LinkedinIcon from '~/assets/icons/linkedin.svg?inline'
 import TwitterIcon from '~/assets/icons/twitter.svg?inline'
@@ -99,7 +98,6 @@ import {
 
 export default {
   components: {
-    Logo,
     FacebookIcon,
     LinkedinIcon,
     TwitterIcon,

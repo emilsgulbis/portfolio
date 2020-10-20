@@ -1,10 +1,6 @@
 import pkg from './package'
-import { links } from './utils/lists'
-const path = require('path')
 
 export default {
-  mode: 'spa',
-
   /*
    ** Headers of the page
    */
@@ -26,14 +22,12 @@ export default {
    */
   loading: { color: '#4c33fb' },
 
-  generate: {
-    routes: links.map(link => link.to)
-  },
-
   /*
    ** Global CSS
    */
   css: ['~/assets/css/custom.scss'],
+
+  components: true,
 
   /*
    ** Plugins to load before mounting the App
@@ -43,14 +37,8 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: ['@nuxtjs/pwa', 'nuxt-webfontloader', '@nuxtjs/svg'],
-
-  devModules: ['@nuxtjs/tailwindcss', 'nuxt-purgecss', '@nuxtjs/eslint-module'],
-
-  tailwindcss: {
-    configPath: '~/assets/tailwind.config.js',
-    cssPath: '~/assets/css/tailwind.css'
-  },
+  modules: ['@nuxtjs/svg', 'nuxt-webfontloader'],
+  buildModules: ['@nuxtjs/tailwindcss'],
 
   webfontloader: {
     google: {

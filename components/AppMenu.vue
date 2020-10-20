@@ -29,14 +29,9 @@
 </template>
 
 <script>
-import Burger from '~/components/Burger'
 import { links } from '~/utils/lists'
 
 export default {
-  components: {
-    Burger
-  },
-
   data() {
     return {
       isOpen: false,

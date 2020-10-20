@@ -3,21 +3,21 @@
     <div class="w-490px flex-grow-0">
       <form class="bg-black shadow p-10 mb-10" @submit.prevent="">
         <p class="text-white text-xl font-bold mb-10">Send a message</p>
-        <fe-field
+        <form-field
           v-model="form.name"
           label="Your Name"
           type="text"
           class="mb-8"
         />
 
-        <fe-field
+        <form-field
           v-model="form.email"
           label="Your Email"
           type="email"
           class="mb-8"
         />
 
-        <fe-field
+        <form-field
           v-model="form.message"
           label="Your Message"
           type="textarea"
@@ -69,15 +69,7 @@
 </template>
 
 <script>
-import Field from '~/components/Field'
-import GoogleMaps from '~/components/GoogleMaps'
-
 export default {
-  components: {
-    FeField: Field,
-    GoogleMaps
-  },
-
   data() {
     return {
       form: {
